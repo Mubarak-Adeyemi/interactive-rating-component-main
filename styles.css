@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+  --Orange: hsl(25, 97%, 53%);
+  --icon-bg: hsl(209, 23%, 20%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: "Overpass", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--Very-Dark-Blue);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.rating-component,
+dialog {
+  position: relative;
+  width: 90%;
+  max-width: 450px;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: var(--Dark-Blue);
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--icon-bg);
+  display: flex;
+  border-radius: 50%;
+}
+.icon img {
+  margin: auto;
+}
+h1 {
+  font-size: 1.375re;
+  color: var(--White);
+  padding: 0.625rem 0; /* 0.625px = 10px */
+}
+p {
+  font-size: 1rem;
+  padding: 0.625rem 0;
+  color: var(--Light-Grey);
+  line-height: 1.5;
+}
+fieldset {
+  border: none;
+  margin: 1.25rem 0;
+}
+.rating-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.rating-buttons input[type="radio"] {
+  position: absolute;
+  appearance: none;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.rating-buttons label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--icon-bg);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  font-weight: 700;
+  color: var(--Light-Grey);
+}
+
+.rating-buttons label:hover {
+  background-color: var(--Orange);
+  color: var(--Dark-Blue);
+}
+
+.rating-buttons input[type="radio"]:checked + label {
+  background-color: var(--White);
+  color: var(--Very-Dark-Blue);
+  transform: scale(1.2);
+}
+
+button {
+  cursor: pointer;
+  width: 100%;
+  padding: 0.625rem;
+  border-radius: 16px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: var(--Orange);
+}
+
+button:hover {
+  background-color: var(--White);
+}
+button:active {
+  transform: scale(0.95);
+}
+
+dialog {
+  border: none;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+dialog p.rating-info {
+  display: inline;
+  padding: 0.625rem;
+  border-radius: 16px;
+  color: var(--Orange);
+  background-color: var(--icon-bg);
+}
+dialog h2 {
+  color: white;
+  margin-top: 1.25rem;
+  font-size: 1.25rem;
+}
+dialog img {
+  margin-bottom: 1.25rem;
+}
+dialog span {
+  font-weight: 700;
+}
+.error-message {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 100px);
+  border: 2px solid var(--Orange);
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--Very-Dark-Blue);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.error-message.show {
+  transform: translateY(1rem);
+  visibility: visible;
+}
+.error-message p {
+  color: var(--Orange);
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.625rem;
+  }
+  p,
+  button {
+    font-size: 1.125rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
