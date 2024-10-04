@@ -21,94 +21,110 @@
   </head>
   <body>
     <section class="rating-component" aria-labelledby="rating-title">
-      <div class="icon" role="img" aria-label="Star Icon">
-        <img src="./images/icon-star.svg" alt="Icon Star" />
-      </div>
-      <h1>How did we do?</h1>
-      <p>
-        Please let us know how we did with your support request. All feedback is
-        appreciated to help us improve our offering!
-      </p>
-      <form action="" id="rating-component" aria-describedby="error-message">
-        <fieldset>
-          <div
-            class="rating-buttons"
-            role="radiogroup"
-            aria-label="Rating from 1 to 5"
-          >
-            <input
-              type="radio"
-              name="rating"
-              id="rating-1"
-              value="1"
-              aria-label="1 out of 5"
-            />
-            <label for="rating-1">1</label>
-            <input
-              type="radio"
-              name="rating"
-              id="rating-2"
-              value="2"
-              aria-label="2 out of 5"
-            />
-            <label for="rating-2">2</label>
-            <input
-              type="radio"
-              name="rating"
-              id="rating-3"
-              value="3"
-              aria-label="3 out of 5"
-            />
-            <label for="rating-3">3</label>
-
-            <input
-              type="radio"
-              name="rating"
-              id="rating-4"
-              value="4"
-              aria-label="4 out of 5"
-            />
-            <label for="rating-4">4</label>
-            <input
-              type="radio"
-              name="rating"
-              id="rating-5"
-              value="5"
-              aria-label="5 out of 5"
-            />
-            <label for="rating-5">5</label>
-          </div>
-        </fieldset>
-
-        <button
-          type="submit"
-          popovertarget="thank-you-modal"
-          popovertargetaction="show"
-        >
-          Submit
-        </button>
-        <div class="error-message" aria-live="assertive" role="alert">
-          <p>Please select a rating</p>
+      <header>
+        <div class="icon" role="img" aria-label="Star Icon">
+          <img src="./images/icon-star.svg" alt="Icon Star" />
         </div>
-      </form>
+        <h1>How did we do?</h1>
+      </header>
+
+      <main>
+        <p>
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+      </main>
+
+      <footer>
+        <form action="" id="rating-component" aria-describedby="error-message">
+          <fieldset>
+            <div
+              class="rating-buttons"
+              role="radiogroup"
+              aria-label="Rating from 1 to 5"
+            >
+              <input
+                type="radio"
+                name="rating"
+                id="rating-1"
+                value="1"
+                aria-label="1 out of 5"
+              />
+              <label for="rating-1">1</label>
+              <input
+                type="radio"
+                name="rating"
+                id="rating-2"
+                value="2"
+                aria-label="2 out of 5"
+              />
+              <label for="rating-2">2</label>
+              <input
+                type="radio"
+                name="rating"
+                id="rating-3"
+                value="3"
+                aria-label="3 out of 5"
+              />
+              <label for="rating-3">3</label>
+
+              <input
+                type="radio"
+                name="rating"
+                id="rating-4"
+                value="4"
+                aria-label="4 out of 5"
+              />
+              <label for="rating-4">4</label>
+              <input
+                type="radio"
+                name="rating"
+                id="rating-5"
+                value="5"
+                aria-label="5 out of 5"
+              />
+              <label for="rating-5">5</label>
+            </div>
+          </fieldset>
+
+          <button
+            type="submit"
+            popovertarget="thank-you-modal"
+            popovertargetaction="show"
+          >
+            Submit
+          </button>
+          <div class="error-message" aria-live="assertive" role="alert">
+            <p>Please select a rating</p>
+          </div>
+        </form>
+      </footer>
     </section>
 
     <dialog id="thank-you-modal" popover>
-      <div class="illustration-thank-you">
-        <img
-          src="./images/illustration-thank-you.svg"
-          alt="Illustration for thank you"
-        />
-      </div>
-      <p class="rating-info">
-        You selected <span id="selected-rating">0</span> out of 5
-      </p>
-      <h2>Thank you!</h2>
-      <p class="appreciation">
-        We appreciate you taking the time to give a rating. If you ever need
-        more support, don’t hesitate to get in touch!
-      </p>
-      <button id="close-modal" type="button">Close</button>
+      <header>
+        <div class="illustration-thank-you">
+          <img
+            src="./images/illustration-thank-you.svg"
+            alt="Illustration for thank you"
+          />
+        </div>
+        <p class="rating-info">
+          You selected <span id="selected-rating">0</span> out of 5
+        </p>
+        <h2>Thank you!</h2>
+      </header>
+
+      <main>
+        <p class="appreciation">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </main>
+
+      <footer>
+        <button id="close-modal" type="button">Close</button>
+      </footer>
     </dialog>
 
     <script src="script.js"></script>
